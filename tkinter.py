@@ -73,9 +73,9 @@ def week2():
             myRolls.append(random.randint(1, int(dieType)))
         #display dice rolls and present an exit buttn
         L4W2 = Label(top, text ="These are your rolls")
-        L4W2.grid(column = 0, row = 1)
-        L5W2 = Label(top, text="{}".format(myRolls))
-        L5W2.grid(column = 0, row = 2)
+        L4W2.grid(column = 0, row = 0)
+        L5W2 = Label(top, text="{}".format(str(myRolls)[1:-1]),wraplength = 50, justify = LEFT)
+        L5W2.grid(column = 0, row = 1)
         B2W2 =  Button(top, text = "Main Menu", command = mainMenu, bg = "red")
         B2W2.grid(column = 0, row = 3)
         
@@ -95,7 +95,7 @@ def week2():
     E2W2 = Entry(top, bd = 5)
     E2W2.grid(column = 0, row = 5)
 
-    B1W2 = Button(top, text="Press your luck",command = rollDice())
+    B1W2 = Button(top, text="Press your luck",command = rollDice)
     B1W2.grid(column = 0, row = 6)
     
 if __name__ == "__main__":
